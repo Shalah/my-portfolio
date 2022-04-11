@@ -1,10 +1,12 @@
 
-function App() {
+import Intro from "./components/intro/Intro";
+
+const App = () => {
   return (
-    <div>
-      Hello World
-    </div>
-  );
-}
+  <div>
+    <Intro />
+  </div>
+  )
+};
 
 export default App;

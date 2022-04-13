@@ -20,7 +20,7 @@ const Intro = () => {
             </div>
           </div>
 
-          <p className="i-description">
+          <p className="i-desc">
             I'm an information systems management professional <br/>
             With a bachelors in biomedical engineering technology and an interest in <br/>
             I am familiar with HTML, CSS, JavaScript, Node JS and MySql.  <br/>
@@ -28,7 +28,7 @@ const Intro = () => {
 
         </div>
 
-        <svg
+        {/* <svg
           width="75"
           height="75"
           viewBox="0 0 75 75"
@@ -83,7 +83,7 @@ const Intro = () => {
               />
             </g>
           </g>
-        </svg>
+        </svg> */}
       </div>
 
       <div className='i-right'> 

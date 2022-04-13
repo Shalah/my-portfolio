@@ -2,18 +2,36 @@ import './contact.css'
 import Email from '../../img/email-logo.png'
 import Github from '../../img/github-logo.png'
 import LinkedIn from '../../img/linkedin-logo.png'
-import { useRef } from 'react'
+import Resume from '../../img/resume-logo.png'
+import { useContext, useRef, useState } from 'react'
+import emailjs from "emailjs-com";
+import { ThemeContext } from '../../context'
 
 const Contact = () => {
 
     const formRef = useRef()
+    const [done, setDone] = useState(false)
+
+    const theme = useContext(ThemeContext);
+    const darkMode = theme.state.darkMode;
+
 
     const handleSubmit = (event) => {
-        event.preventDefault()
-    }
+        event.preventDefault();
+        
+        emailjs.sendForm('service_eb14gke', 'template_iituxcl', formRef.current, 'sk56TEFwIDoyyqCGV')
+        .then((result) => {
+            console.log(result.text);
+            setDone(true)
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
+        
+    
 
   return (
-    <div className='c'>
+    <div className='c'> 
         <div className="c-bg"></div>
         <div className="c-wrapper">
             <div className="c-left">
@@ -22,28 +40,54 @@ const Contact = () => {
                 </h1>
                 <div className="c-info">
                     <div className="c-info-item">
-                        <img 
-                            src={Email} 
+                        <a href='https://docs.google.com/document/d/1NZ13Rein7wN_0Judk4YkxoJc_SiBlw1n/edit?usp=sharing&ouid=114442831849016114024&rtpof=true&sd=true'
+                        target= '_blank'
+                        rel="noreferrer">
+                            <img 
+                            src={Resume} 
                             alt="" 
                             className="c-icon" 
                         />
-                        email.email.com
+                        <span className="c-info-item-name">Resume</span>  
+                        </a>
                     </div>
+
                     <div className="c-info-item">
-                        <img 
+                        <a href='https://github.com/Shalah' 
+                        target= '_blank'
+                        rel="noreferrer">
+                            <img 
                             src={Github} 
                             alt="" 
                             className="c-icon" 
                         />
-                        https://github.com/Shalah
+                        Shalah
+                        </a>
+                        
                     </div>
                     <div className="c-info-item">
-                        <img 
+                        <a href='https://www.linkedin.com/in/rim-zoungrana/' 
+                        target= '_blank'
+                        rel="noreferrer">
+                            <img 
                             src={LinkedIn} 
                             alt="" 
                             className="c-icon" 
                         />
-                        https://www.linkedin.com/in/rim-zoungrana/
+                        Rim Zoungrana
+                        </a>
+                    </div>
+                    <div className="c-info-item">
+                        <a href='zoungranarim@gmail.com' 
+                        target= '_blank'
+                        rel="noreferrer">
+                           <img 
+                            src={Email} 
+                            alt="" 
+                            className="c-icon" 
+                            />
+                            zoungranarim@gmail.com 
+                        </a>  
                     </div>
                 </div>
             </div>
@@ -53,11 +97,12 @@ const Contact = () => {
                     <b> What's your story? </b> Get in touch. Always ready for freelancing if the right project comes along
                 </p>
                 <form ref={formRef} onSubmit={handleSubmit}>
-                    <input type='text' placeholder='Name' name='user_name' />
-                    <input type='text' placeholder='Subject' name='user_subject' />
-                    <input type='text' placeholder='Email' name='user_email' />
-                    <textarea rows='5' placeholder='Message' name='message' />
+                    <input style={{backgroundColor: darkMode && '#333'}} type='text' placeholder='Name' name='user_name' />
+                    <input style={{backgroundColor: darkMode && '#333'}} type='text' placeholder='Subject' name='user_subject' />
+                    <input style={{backgroundColor: darkMode && '#333'}} type='text' placeholder='Email' name='user_email' />
+                    <textarea style={{backgroundColor: darkMode && '#333'}} rows='5' placeholder='Message' name='message' />
                     <button> Submit </button>
+                    {done && 'Thank you ...'}
                 </form>
             </div>
         </div>

@@ -38,12 +38,24 @@
     margin: 50px 0;
     font-weight: 300;
     width: 70%;
+    /* border: 1px red solid; */
+}
+
+/* .c-info-item-name{
+    border: 1px blue solid;
+    
+} */
+
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: black;
 }
 
 .c-icon{
     width: 30px;
     height: 30px;
     margin-right: 20px;
+    /* border: 1px green solid; */
 }
 
 .c-desc{
@@ -79,4 +91,41 @@ button{
     color: white;
     cursor: pointer;
     font-weight: 500;
+}
+
+@media screen and (max-width: 480px){
+    .c-wrapper{
+        flex-direction: column;
+        padding: 0 50px;
+    }
+
+    .c-title{
+        font-size: 30px;
+    }
+
+    .c-info-item{
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .c-desc{
+        display: none;
+    }
+
+    form{
+        margin-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    input{
+        width: 35%;
+        height: 40px;
+        margin: 10px;
+        margin-left: 0;
+    }
+
+    button{
+        margin-top: 10px;
+    }
 }

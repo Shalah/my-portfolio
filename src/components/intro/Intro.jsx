@@ -7,7 +7,7 @@ const Intro = () => {
       <div className='i-left'> 
         <div className="i-left-wrapper">
 
-          <h2 className='i-intro'> Hello, my name is </h2>
+          <h2 className='i-intro'> Hello, I am </h2>
           <h1 className='i-name'> Rim Zoungrana </h1>
 
           <div className="i-title">
@@ -21,9 +21,9 @@ const Intro = () => {
           </div>
 
           <p className="i-desc">
-            I'm an information systems management professional <br/>
-            With a bachelors in biomedical engineering technology and an interest in <br/>
-            I am familiar with HTML, CSS, JavaScript, Node JS and MySql.  <br/>
+            I'm an Information Systems Management professional, <br/>
+            With a degree in Biomedical Engineering and a passion for Web Development<br/>
+            
           </p>
 
         </div>

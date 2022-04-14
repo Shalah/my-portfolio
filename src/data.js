@@ -1,3 +1,5 @@
+
+
 export const products = [
     {
         id: 1,
@@ -8,7 +10,7 @@ export const products = [
     {
         id: 2,
         name: 'Hamper',
-        img: 'https://thehamper.herokuapp.com/img/logo-text.png',
+        img: 'https://github.com/Shalah/hamper/raw/main/public/img/the-Hamper-App.png',
         link: 'https://thehamper.herokuapp.com',
     },
     {
@@ -25,14 +27,14 @@ export const products = [
     },
     {
         id: 5,
-        name: 'Tech Blog',
-        img: 'https://shalah.github.io/tech-blog/public/images/tech-blog.png',
-        link: 'https://afternoon-lake-74276.herokuapp.com/',
+        name: 'Note Taker',
+        img: 'https://github.com/Shalah/note-taker-project/raw/main/public/assets/img/note-taker.png',
+        link: 'https://pure-ocean-33810.herokuapp.com/',
     },
     {
         id: 6,
-        name: 'Tech Blog',
-        img: 'https://shalah.github.io/tech-blog/public/images/tech-blog.png',
-        link: 'https://afternoon-lake-74276.herokuapp.com/',
+        name: 'Text Editor',
+        img: 'https://github.com/Shalah/text-editor/raw/main/client/src/images/text-editor.png',
+        link: 'https://the-text-editor.herokuapp.com/',
     },
   ];

@@ -36,7 +36,7 @@ const Contact = () => {
         <div className="c-wrapper">
             <div className="c-left">
                 <h1 className="c-title"> 
-                    Discuss my Project 
+                    Contact Me
                 </h1>
                 <div className="c-info">
                     <div className="c-info-item">
@@ -94,7 +94,7 @@ const Contact = () => {
 
             <div className="c-right">
                 <p className="c-desc">
-                    <b> What's your story? </b> Get in touch. Always ready for freelancing if the right project comes along
+                    <b> What's your next project? </b> Get in touch and let's collaborate to make it happen
                 </p>
                 <form ref={formRef} onSubmit={handleSubmit}>
                     <input style={{backgroundColor: darkMode && '#333'}} type='text' placeholder='Name' name='user_name' />
@@ -103,7 +103,7 @@ const Contact = () => {
                     <textarea style={{backgroundColor: darkMode && '#333'}} rows='5' placeholder='Message' name='message' />
                     <button> Submit </button>
                     {done && 'Thank you ...'}
-                </form>
+                </form> 
             </div>
         </div>
     </div>

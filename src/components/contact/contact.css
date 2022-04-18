@@ -58,8 +58,9 @@ a:link, a:visited, a:hover, a:active{
     /* border: 1px green solid; */
 }
 
-.c-desc{
-    font-weight: 200;
+.c-desc b{
+    
+font-size: 20px;
 }
 
 form{

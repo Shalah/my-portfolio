@@ -7,9 +7,8 @@ const About = () => {
       <div className="a-left">
         <div className="a-card bg"></div>
         <div className="a-card">
-          <img
-            src="https://images.pexels.com/photos/3585047/pexels-photo-3585047.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            alt=""
+          <div  // This div could be replaced by an img
+            
             className="a-img"
           />
         </div>
@@ -23,16 +22,6 @@ const About = () => {
           I have an interest in learning more languages and concepts such as Python, C++, TypeScript,
           AWS and Facade Design Pattern.
         </p>
-        {/* <div className="a-award">
-          <img src={Award} alt="" className="a-award-img" />
-          <div className="a-award-texts">
-            <h4 className="a-award-title">International Design Awards 2021</h4>
-            <p className="a-award-desc">
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur autodit
-              and fugit.
-            </p>
-          </div>
-        </div> */}
       </div>
     </div>
   );

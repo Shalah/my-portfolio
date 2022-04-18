@@ -1,5 +1,5 @@
 import './intro.css'
-import Portfolio from '../../img/my-portfolio.png'
+import Portfolio from '../../img/intro-portfolio.png'
 
 const Intro = () => {
   return (
